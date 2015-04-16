@@ -4,8 +4,18 @@
 @import mixins
 @import reset
 
+*,
+*::after,
+*::before
+  @include box-sizing
+
+html
+  font-size: 62.5%
+
 body
   background: #fafafa
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font-family: Georgia, serif
   color: #333
 
+@import header
+@import slider

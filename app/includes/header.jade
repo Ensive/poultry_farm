@@ -1,0 +1,16 @@
+//- includes/header.jade
+block link
+
+div.header-wrapper
+  header.header
+    h2.header__title
+      a.header__title-link(href='/' title='Home') Poultry farm
+    nav.header__navigation
+      - var menu = { 'home': '/', 'services': '/services', 'blog': '/blog', 'contacts': '/contacts' }
+      ul.header__menu-list
+        each link, page in menu
+          li.header__menu-item
+            if active === page
+              a.header__menu-link.active(href=link, title=page)= page
+            else
+              a.header__menu-link(href=link, title=page)= page

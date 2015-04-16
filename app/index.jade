@@ -1,2 +1,9 @@
+//- index.jade
 extends layouts/default
 
+block link
+  -var active = 'home'
+
+block content
+  include ./includes/header.jade
+  include ./includes/slider.jade

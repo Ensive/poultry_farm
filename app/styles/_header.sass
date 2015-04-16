@@ -1,0 +1,65 @@
+.header-wrapper
+  display: block
+  width: 100%
+  height: 120px
+  background: url('../images/header-bg.jpg') center center no-repeat
+
+.header
+  height: 120px
+  @include cf
+  @include container
+
+  &__title
+    float: left
+    margin: 36px 0 0 0
+    font-size: 50px
+    font-size: 5rem
+    &-link
+      color: $pf_text
+      text-decoration: none
+
+  &__navigation
+    float: right
+    margin: 38px 0 0 0
+    font-size: 18px
+    font-size: 1.8rem
+    text-transform: capitalize
+    color: $pf_text
+
+  &__menu-item,
+  &__menu-link
+    float: left
+
+  &__menu-link
+    position: relative
+    display: block
+    height: 44px
+    padding: 0 21px 0 19px
+    line-height: 44px
+    text-align: center
+    text-decoration: none
+    color: $pf_text
+    overflow: hidden
+    transition: background-color .2s ease, color .2s ease
+    // &::before
+    //   content: ''
+    //   position: absolute
+    //   bottom: 0
+    //   left: 0
+    //   display: block
+    //   width: 0
+    //   height: 2px
+    //   background-color: $pf_text
+    //   @include transition(width)
+    // &:hover
+    //   &::before
+    //     width: 100%\
+    &:hover,
+    &.active
+      background-color: #E7DB43
+      color: #FEFEFE
+      &::before
+        display: none
+
+
+
