@@ -1,0 +1,89 @@
+.events-wrapper
+  width: 100%
+  height: 883px
+  overflow: hidden
+  background: url('../images/events-section-image.jpg') center center no-repeat
+  @include cf
+
+.events
+  z-index: 1
+  position: relative
+  height: 843px
+  color: #fff
+  overflow: hidden
+  @include container
+
+  &-content
+    position: relative
+    margin: 190px 0 0 0
+    // height: 405px
+    height: 380px
+
+  &-block
+    padding: 0 9.487179487179% 0 0
+    height: 380px
+    overflow-y: auto
+    &::-webkit-scrollbar
+      width: 14px
+    &::-webkit-scrollbar-thumb
+      width: 14px
+      background: #E7DB43
+    &::-webkit-scrollbar-track-piece
+      display: none
+
+    &::before
+      content: ''
+      z-index: -1
+      position: absolute
+      // top: 138px
+      top: 141px
+      right: 7px
+      display: block
+      width: 1px
+      height: 100%
+      background-color: #fff
+
+  &__title
+    margin: 0 0 71px 0
+    // color: #fff
+    letter-spacing: -3px
+
+  &-content
+    float: right
+    width: 48.717948717949%
+
+  &-item
+    position: relative
+    padding:  0 0 36px 0
+
+    &__date
+      // color: #fff
+      font-size: 16px
+      font-size: 1.6rem
+      letter-spacing: -0.4px
+
+    &__title
+      margin: 8px 0 0 0
+      // color: #fff
+      font-size: 26px
+      font-size: 2.6rem
+
+    &__text
+      // color: #fff
+      font-family: $ubuntu-light
+      font-size: 13px
+      font-size: 1.3rem
+      line-height: 26px
+      margin: 2px 0 0 0
+
+    &::after
+      content: ''
+      position: absolute
+      left: 0
+      bottom: 16px
+      display: block
+      width: 164px
+      height: 5px
+      background-color: #FFF
+
+

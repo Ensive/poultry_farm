@@ -23,6 +23,11 @@ body
 .container
   @include container
 
+.section-title
+  font-size: 70px
+  font-size: 7rem
+
+// section numbers
 .section-number
   position: absolute
   bottom: -120px
@@ -31,13 +36,24 @@ body
   font-size: 340px
   font-size: 34rem
   letter-spacing: -22px
+  text-transform: uppercase
   color: #fff
-  &.welcome-number
+
+  &--welcome
     color: $pf_text
     left: auto
     right: -8px
     letter-spacing: -20px
 
+  &--events
+    color: $pf_yellow
+
+  &--wwd
+    left: auto
+    right: 0
+
 @import header
-@import slider
-@import welcome
+@import index/slider
+@import index/welcome
+@import index/events
+@import index/wwd

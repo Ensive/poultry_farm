@@ -1,0 +1,20 @@
+.events-wrapper
+
+  .events
+    section
+      .section-number.section-number--events 03
+
+      .events-content
+        h2.events__title.section-title Events
+        .events-block
+          -var events = [{date: '12/05/2015', title: 'Duisac turpis. Integer rutrum', text: 'Mauris fermeum dictum magn. Sed loreet aliquam leote llus dolor dapibus eget elementum vel curs elfend elit. Aenean aucto. wisi et urna. Aliqat volutpat.'}, {date: '12/05/2015', title: 'Ger rutrum ante eu lacutilum', text: 'Mauris fermeum dictum magn. Sed loreet aliquam leote llus dolor dapibus eget elementum vel curs elfend elit. Aenean aucto. wisi et urna. Aliqat volutpat.'}, {date: '12/05/2015', title: 'Stilum libero nisl porta vel sceleri', text: 'Mauris fermeum dictum magn. Sed loreet aliquam leote llus dolor dapibus eget elementum vel curs elfend elit. Aenean aucto. wisi et urna. Aliqat volutpat.'}, {date: '12/05/2015', title: 'Stilum libero nisl porta vel sceleri', text: 'Mauris fermeum dictum magn. Sed loreet aliquam leote llus dolor dapibus eget elementum vel curs elfend elit. Aenean aucto. wisi et urna. Aliqat volutpat.'}, {date: '12/05/2015', title: 'Stilum libero nisl porta vel sceleri', text: 'Mauris fermeum dictum magn. Sed loreet aliquam leote llus dolor dapibus eget elementum vel curs elfend elit. Aenean aucto. wisi et urna. Aliqat volutpat.'}, {date: '12/05/2015', title: 'Stilum libero nisl porta vel sceleri', text: 'Mauris fermeum dictum magn. Sed loreet aliquam leote llus dolor dapibus eget elementum vel curs elfend elit. Aenean aucto. wisi et urna. Aliqat volutpat.'}]
+          for event in events
+
+            .events-item
+              article
+                time.events-item__date= event.date
+                h3.events-item__title= event.title
+                p.events-item__text= event.text
+
+
+

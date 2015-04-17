@@ -1,4 +1,5 @@
 .slider-wrapper
+
   -var images = ['first', 'second', 'third']
   for image in images
     .slider-image(class='#{ image }')
@@ -8,6 +9,7 @@
       a.slider__arrow.slider__arrow--left(href='#' role='button')
       a.slider__arrow.slider__arrow--right(href='#' role='button')
     section
+      h2.hidden
       .section-number 01
       -var slides = [{title: 'You\'ll love our chicken', text: 'Vestibulum libero nisl porta vel scele', index: 'first'}, {title: 'Low fat protein rich eggs', text: 'Vestibulum libero nisl porta vel scele', index: 'second'}, {title: 'Fresh from the farm', text: 'Vestibulum libero nisl porta vel scele', index: 'third'}]
       for slide in slides
@@ -16,4 +18,3 @@
             .slider-item__content
               h2.slider-item__title= slide.title
               p.slider-item__text= slide.text
-
