@@ -1,0 +1,3 @@
+PF_Map = ( ( $ ) ->
+
+) jQuery

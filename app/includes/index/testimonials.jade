@@ -1,0 +1,21 @@
+.testimonials-wrapper
+
+  .testimonials
+    section
+      h2.testimonials__title.section-title Testimonials
+
+      -var testimonials = [{personName: 'Jessica Priston', personInfo: 'roin dictum elemen', heading: 'Stilum libero nislrt vel scelerisque eget malesuada at neqivamus eget nibh. Etiamursus leo vel metus', text: 'Duisac turpis. Integer rutrum ante eu lacuestilum lio nisl porta vel scelesqueget malesuada at neqVivamus eget nibh. Etiamursus leo vel metus. Nulla facil nec eroestibulum ante ipst pharetra auue nec augntum. Donec ielit vel ipsuuue. Nam elit magnae orta diam eu massa. Quise diam lorem interdum vitaapibus ac scelee vitae pedeonec eget tellus non erat lacinia fermentum. Donec in velit vel ipsum auctovinar. Proin ullamcorper urna et felisstibulum iaculis lacinia est in dictum elentum velit. Fusce euismod consequat ante.'}]
+
+      for testimonial in testimonials
+        .testimonials-item
+          article
+            .testimonials-item__person
+              -var name = testimonial.personName.replace(' ', '-').toLowerCase()
+              .testimonials-item__photo
+                img(src='images/testimonials/#{ name }.png' alt='Photo of #{ testimonial.personName }' title='#{ testimonial.personName }')
+              span.testimonials-item__person-name= testimonial.personName
+              span.testimonials-item__person-info= testimonial.personInfo
+            .testimonials-item__content
+              h3.testimonials-item__content-title!= '&ldquo;' + testimonial.heading + '&ldquo;'
+              p.testimonials-item__content-text= testimonial.text
+
