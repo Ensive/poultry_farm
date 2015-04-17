@@ -1,21 +1,81 @@
 .slider-wrapper
   position: relative
   width: 100%
+  height: 917px
+  overflow: hidden
+  @include cf
 
 .slider
-  @include cf()
+  position: relative
+  width: 100%
+  height: 877px
+  overflow: hidden
   @include container
 
-  &-item
-    &__content
-      color: #fff
+  &__nav
+    position: absolute
+    top: 240px
+    right: 35.726495726496%
+    // right: 418px
+    @include cf
+    .slider__arrow
+      display: block
+      float: left
+      width: 71px
+      height: 71px
+      background: url('../images/slider-left-arrow.svg')
+      background-size: 71px 71px
+      text-decoration: none
+      @include rounded(100%)
+      &--right
+        margin: 0 0 0 9px
+        background: url('../images/slider-right-arrow.svg')
 
-    &::before
-      content: ''
-      z-index: -1
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 917px
-      background: url('../images/slider/slider-image-1.jpg') 0 0 no-repeat
+  &-item
+    height: 917px
+    @include cf
+
+    &__content
+      float: right
+      margin: 345px -2px 0 0
+      color: #fff
+      width: 48.717948717949%
+      padding: 0 6.581196581197% 0 0
+
+    &__title,
+    &__text
+      text-shadow: 0 0 2px rgba(0, 0, 0, 0.36)
+
+    &__title
+      font-size: 90px
+      font-size: 9rem
+      font-weight: 400
+      line-height: 80px
+      letter-spacing: 3px
+      text-transform: uppercase
+    &__text
+      margin: 25px 0 0 0
+      font-size: 26px
+      font-size: 2.6rem
+      letter-spacing: -0.2px
+
+    /* @todo: remove */
+    &.second,
+    &.third
+      display: none
+
+  &-image
+    z-index: -1
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 917px
+    background: url('../images/slider/slider-image-1.jpg') center center no-repeat
+    @include background-cover
+
+    /* @todo: remove */
+    &.second,
+    &.third
+      display: none
+

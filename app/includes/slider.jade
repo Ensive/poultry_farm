@@ -1,4 +1,8 @@
 .slider-wrapper
+  -var images = ['first', 'second', 'third']
+  for image in images
+    .slider-image(class='#{ image }')
+
   .slider
     nav.slider__nav
       a.slider__arrow.slider__arrow--left(href='#' role='button')
@@ -12,6 +16,4 @@
             .slider-item__content
               h2.slider-item__title= slide.title
               p.slider-item__text= slide.text
-
-
 

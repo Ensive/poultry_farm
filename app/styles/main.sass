@@ -3,6 +3,8 @@
 
 @import mixins
 @import reset
+@import helper
+@import fonts
 
 *,
 *::after,
@@ -11,11 +13,31 @@
 
 html
   font-size: 62.5%
+  overflow-x: hidden
+  // overflow: hidden
 
 body
-  background: #fafafa
   font-family: Georgia, serif
-  color: #333
+
+// general components
+.container
+  @include container
+
+.section-number
+  position: absolute
+  bottom: -120px
+  left: -10px
+  font-family: $ubuntu-medium
+  font-size: 340px
+  font-size: 34rem
+  letter-spacing: -22px
+  color: #fff
+  &.welcome-number
+    color: $pf_text
+    left: auto
+    right: -8px
+    letter-spacing: -20px
 
 @import header
 @import slider
+@import welcome

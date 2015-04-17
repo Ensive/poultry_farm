@@ -3,9 +3,10 @@ block link
 
 div.header-wrapper
   header.header
-    h2.header__title
+    h1.header__title
       a.header__title-link(href='/' title='Home') Poultry farm
     nav.header__navigation
+      h2.hidden Main menu
       - var menu = { 'home': '/', 'services': '/services', 'blog': '/blog', 'contacts': '/contacts' }
       ul.header__menu-list
         each link, page in menu
