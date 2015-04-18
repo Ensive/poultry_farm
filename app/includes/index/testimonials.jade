@@ -12,7 +12,7 @@
         .testimonials-item
           article
             .testimonials-item__person
-              -var name = testimonial.personName.replace(' ', '-').toLowerCase()
+              -var name = testimonial.personName.replace(/\s/g, '-').toLowerCase()
               .testimonials-item__photo
                 img(src='images/testimonials/#{ name }.png' alt='Photo of #{ testimonial.personName }' title='#{ testimonial.personName }')
               span.testimonials-item__person-name= testimonial.personName

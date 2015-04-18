@@ -3,7 +3,7 @@
   min-height: 883px
   overflow: hidden
   background: url('../images/testimonials-section-image.jpg') 0 0 repeat
-  // @include cf
+  @include cf
 
 .testimonials
   width: 100%
@@ -27,15 +27,12 @@
       text-align: center
 
     &__photo
-      width: 270px
-      height: 270px
+      width: 89.700996677741%
+      height: auto
+      max-height: 270px
       text-align: left
       overflow: hidden
-      opacity: 0.8
-      @include transition(opacity)
       @include rounded(100%)
-      &:hover
-        opacity: 1
 
     &__person-name
       display: block

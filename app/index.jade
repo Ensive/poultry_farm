@@ -1,15 +1,23 @@
 //- index.jade
 extends layouts/default
 
+block googleMapsApi
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAQjSMVCSomUxbZ4w2X5JNu0dnWoFLTqmA')
+
 block link
   -var active = 'home'
 
 block content
   include ./includes/header.jade
+
   include ./includes/index/slider.jade
   include ./includes/index/welcome.jade
   include ./includes/index/events.jade
   include ./includes/index/what-we-do.jade
   include ./includes/index/testimonials.jade
+
   include ./includes/map.jade
   include ./includes/footer.jade
+
+block mapScript
+  script(src='scripts/map.js')

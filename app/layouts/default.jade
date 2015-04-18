@@ -6,7 +6,8 @@ html(lang='en')
     meta(name='viewport' content='width=device-width, initial-scale=1')
     title Poultry farm
 
-    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAQjSMVCSomUxbZ4w2X5JNu0dnWoFLTqmA')
+    //- conditionally include google maps api script
+    block googleMapsApi
 
     // build:css styles/vendor.css
     // bower:css
@@ -31,5 +32,6 @@ html(lang='en')
 
     // build:js scripts/main.js
     script(src='scripts/main.js')
-    script(src='scripts/map.js')
+    //- conditionally include map script
+    block mapScript
     // endbuild
