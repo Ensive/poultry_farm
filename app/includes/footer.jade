@@ -1,0 +1,45 @@
+.footer-wrapper
+  footer.footer
+
+    .footer-block
+      article
+        h4.footer-block__title.section-title About us
+        p.footer-block__text Lorem ipsum dolor sit amet consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonu mmy hendrerit mauris. Phasellu porta. Fusce suscipit vari.
+
+    .footer-block
+      article
+        h4.footer-block__title.section-title Locations
+
+        .footer-block__address
+          address
+            span 9863 - 9867 Mill Road,
+            span Cambridge, MG09 99HT
+            span.telephone Freephone: &nbsp;
+              a.telephone__call(href='tel:+18005596580') +1 800 559 6580
+
+        .footer-block__address
+          address
+            span 9870 St Vincent Place,
+            span Glasgow, DC 45 Fr 45.
+            span.telephone Freephone: &nbsp;
+              a.telephone__call(href='tel:+18005596580') +1 800 559 6580
+
+    .footer-block
+      article
+        h4.footer-block__title.section-title Follow us
+        .footer-block__social
+          -var links = {google: '#', pinterest: '#', twitter: '#', facebook: '#'}
+          each href, item in links
+            a.social-link(href='#{ href }' class='social-link--#{ item }')
+
+    //- the only one :)
+    span.cf
+    p.footer__copyright Poultry farm &copy; 2015
+
+
+
+
+
+
+
+

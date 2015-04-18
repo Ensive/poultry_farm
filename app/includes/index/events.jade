@@ -1,3 +1,5 @@
+//- includes/index/events.jade
+// events section
 .events-wrapper
 
   .events
@@ -12,7 +14,10 @@
 
             .events-item
               article
-                time.events-item__date= event.date
+                //- convert to correct format: year-month-day
+                -var date = event.date
+                -var dateTime = date.substr(-4) + '-' + date.substr(0, 2) + '-' + date.substr(3, 2)
+                time.events-item__date(datetime='#{ dateTime }')= event.date
                 h3.events-item__title= event.title
                 p.events-item__text= event.text
 

@@ -1,0 +1,91 @@
+.footer-wrapper
+  width: 100%
+  height: 883px
+  background: url('../images/footer-bg.jpg') 0 0 no-repeat
+  @include cf
+
+.footer
+  @include cf
+  @include container
+  padding: 246px 0 0 0
+
+  &-block
+    width: 31.623931623932%
+    margin: 0 2.564102564103% 0 0
+    float: left
+
+    &:last-of-type
+      margin: 0
+
+    &__title
+      margin: 0 0 72px 0
+      letter-spacing: -1.6px
+
+    &__text
+      margin: 0px 0 0 0
+      font-family: $ubuntu-light
+      font-size: 13px
+      font-size: 1.3rem
+      line-height: 20px
+
+    &__address
+      margin: 0 0 20px 0
+      font-family: $ubuntu-light
+      font-size: 13px
+      font-size: 1.3rem
+      line-height: 20px
+
+      span
+        display: block
+
+      .telephone__call
+        color: $pf_text
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+
+    // social
+    &__social
+      margin: -3px 0 0 0
+      .social-link
+        display: block
+        float: left
+        width: 44px
+        height: 44px
+        margin: 0 11px 0 0
+        text-align: center
+        text-decoration: none
+        line-height: 48px
+        // background-color: #E7DB43
+        background-color: $pf_yellow
+        color: #fff
+        -webkit-transition: background-color 0.3s ease, transform 0.3s ease
+        -moz-transition: background-color 0.3s ease, transform 0.3s ease
+        -o-transition: background-color 0.3s ease, transform 0.3s ease
+        transition: background-color 0.3s ease, transform 0.3s ease
+        @include rounded(100%)
+
+        &::before
+          font-family: 'social'
+          content: '\e800'
+          font-size: 17px
+          font-size: 1.7rem
+        &--pinterest::before
+          content: '\e801'
+        &--twitter::before
+          content: '\e802'
+        &--facebook::before
+          content: '\e803'
+
+        &:hover
+          @include transform(scale(1.1))
+          // transform: scale(1.1)
+          background-color: #2A2D2E
+
+
+
+  &__copyright
+    margin: 151px 0 0 0
+    font-family: 'Myriad Pro', sans-serif
+    font-size: 13px
+    font-size: 1.3rem

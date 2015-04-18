@@ -27,7 +27,15 @@
       text-align: center
 
     &__photo
+      width: 270px
+      height: 270px
       text-align: left
+      overflow: hidden
+      opacity: 0.8
+      @include transition(opacity)
+      @include rounded(100%)
+      &:hover
+        opacity: 1
 
     &__person-name
       display: block
