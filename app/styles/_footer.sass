@@ -5,9 +5,8 @@
   @include cf
 
 .footer
-  @include cf
-  @include container
   padding: 246px 0 0 0
+  @include cf
 
   &-block
     width: 31.623931623932%
@@ -56,14 +55,13 @@
         text-align: center
         text-decoration: none
         line-height: 48px
-        // background-color: #E7DB43
         background-color: $pf_yellow
         color: #fff
         -webkit-transition: background-color 0.3s ease
         -moz-transition: background-color 0.3s ease
         -o-transition: background-color 0.3s ease
         transition: background-color 0.3s ease
-        @include rounded(100%)
+        border-radius: 100%
 
         &::before
           font-family: 'social'
@@ -80,10 +78,14 @@
         &:hover
           background-color: #2A2D2E
 
-
-
   &__copyright
     margin: 151px 0 0 0
     font-family: 'Myriad Pro', sans-serif
     font-size: 13px
     font-size: 1.3rem
+
+  &__link
+    color: $pf_text
+    text-decoration: none
+    &:hover
+      text-decoration: underline

@@ -10,7 +10,6 @@
   width: 100%
   height: 877px
   overflow: hidden
-  @include container
 
   &__nav
     position: absolute
@@ -24,7 +23,7 @@
       background: url('../images/slider-left-arrow.svg')
       background-size: 71px 71px
       text-decoration: none
-      @include rounded(100%)
+      border-radius: 100%
       &--right
         margin: 0 0 0 9px
         background: url('../images/slider-right-arrow.svg')
@@ -69,7 +68,7 @@
     width: 100%
     height: 917px
     background: url('../images/slider/slider-image-1.jpg') center center no-repeat
-    @include background-cover
+    background-size: cover
 
     /* @todo: remove */
     &.second,

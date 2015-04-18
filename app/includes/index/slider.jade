@@ -6,8 +6,8 @@
   for image in images
     .slider-image(class='#{ image }')
 
-  .slider
-    nav.slider__nav
+  .slider.container
+    nav.slider__nav(role='navigation')
       a.slider__arrow.slider__arrow--left(href='#' role='button')
       a.slider__arrow.slider__arrow--right(href='#' role='button')
     section

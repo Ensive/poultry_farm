@@ -1,5 +1,5 @@
 .footer-wrapper
-  footer.footer
+  footer.footer.container
 
     .footer-block
       article
@@ -14,14 +14,14 @@
           address
             span 9863 - 9867 Mill Road,
             span Cambridge, MG09 99HT
-            span.telephone Freephone: &nbsp;
+            span.telephone Freephone: &#32;
               a.telephone__call(href='tel:+18005596580') +1 800 559 6580
 
         .footer-block__address
           address
             span 9870 St Vincent Place,
             span Glasgow, DC 45 Fr 45.
-            span.telephone Freephone: &nbsp;
+            span.telephone Freephone: &#32;
               a.telephone__call(href='tel:+18005596580') +1 800 559 6580
 
     .footer-block
@@ -34,12 +34,6 @@
 
     //- the only one :)
     span.cf
-    p.footer__copyright Poultry farm &copy; 2015
-
-
-
-
-
-
-
-
+    p.footer__copyright
+      a.footer__link(href='/') Poultry farm
+      |  &copy; 2015

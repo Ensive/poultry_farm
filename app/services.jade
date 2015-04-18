@@ -6,8 +6,9 @@ block link
 block content
   include ./includes/header.jade
 
-  include ./includes/services/wwd-list.jade
-  include ./includes/services/block.jade
-  include ./includes/services/offers.jade
+  main(role='main')
+    include ./includes/services/wwd-list.jade
+    include ./includes/services/fresh-block.jade
+    include ./includes/services/offers.jade
 
   include ./includes/footer.jade

@@ -3,11 +3,11 @@ block link
 
 // header
 div.header-wrapper
-  header.header
+  header.header.container
     //- @todo: separate titles for each page
     h1.header__title
       a.header__title-link(href='/' title='Home') Poultry farm
-    nav.header__navigation
+    nav.header__navigation(role='navigation')
       h2.hidden Main menu
       - var menu = { 'home': '/', 'services': '/services.html', 'blog': '/blog.html', 'contacts': '/contacts.html' }
       ul.header__menu-list

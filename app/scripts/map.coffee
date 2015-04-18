@@ -7,7 +7,10 @@ PF_Map = (() ->
   # info window
   infoBox = document.createElement 'div'
   infoBox.className = 'map-info-box'
-  infoBox.innerHTML = 'Poultry farm - you\'ll love our chicken'
+  infoBoxText = '<b>Poultry farm</b>'
+  infoBoxText += '<br />'
+  infoBoxText += '&ldquo;You\'ll love our chicken&ldquo;'
+  infoBox.innerHTML = infoBoxText
 
   # coordinates
   latitudeLongitude = new google.maps.LatLng 35.403816, -119.112834
@@ -27,14 +30,7 @@ PF_Map = (() ->
 
     init: ->
       @mapInit()
-
       window.addEventListener 'resize', @onResize
-
-      # on click open info
-      google.maps.event.addListener marker, 'click', ->
-        infowindow.open map, marker
-
-      google.maps.event.addListener marker, 'click', @toggleBounce
 
     mapInit: ->
       # options
@@ -47,6 +43,12 @@ PF_Map = (() ->
       # info window
       infowindow = new google.maps.InfoWindow
         content: infoBox
+
+      # on click open info
+      google.maps.event.addListener marker, 'click', ->
+        infowindow.open map, marker
+
+      google.maps.event.addListener marker, 'click', @toggleBounce
 
       # initialize
       map = new google.maps.Map mapContainer, mapOptions

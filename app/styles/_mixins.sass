@@ -8,58 +8,7 @@ $pf_yellow: #E9DF4A
 $ubuntu-medium: 'Ubuntu Medium'
 $ubuntu-light: 'Ubuntu Light'
 
-// ==================== MIXINS ==================== //
-
-// border-radius
-@mixin rounded( $radius )
-  -moz-border-radius: $radius
-  border-radius: $radius
-
-// shadow
-@mixin shadow( $x, $y, $blur, $color )
-  -moz-box-shadow: $x $y $blur $color
-  box-shadow: $x $y $blur $color
-
-@mixin shadow-inset( $x, $y, $blur, $color )
-  -moz-box-shadow: inset $x $y $blur $color
-  box-shadow: inset $x $y $blur $color
-
-// transition
-@mixin transition( $property )
-  -webkit-transition: $property .2s ease
-  -moz-transition: $property .2s ease
-  -o-transition: $property .2s ease
-  transition: $property .2s ease
-
-@mixin transition-delay( $time )
-  -webkit-transition-delay: $time
-  -moz-transition-delay: $time
-  -ms-transition-delay: $time
-  -o-transition-delay: $time
-  transition-delay: $time
-
-// transform
-@mixin transform( $transform )
-  -webkit-transform: $transform
-  -moz-transform: $transform
-  -ms-transform: $transform
-  -o-transform: $transform
-  transform: $transform
-
-// general mixins
-@mixin box-sizing
-  -webkit-box-sizing: border-box
-  -moz-box-sizing: border-box
-  -ms-box-sizing: border-box
-  box-sizing: border-box
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')"
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale')
-
-@mixin background-cover
-  -webkit-background-size: cover
-  -moz-background-size: cover
-  -o-background-size: cover
-  background-size: cover
+// ==================== GENERAL MIXINS ==================== //
 
 @mixin visibility-hidden
   -webkit-backface-visibility: hidden
@@ -82,13 +31,11 @@ $ubuntu-light: 'Ubuntu Light'
   appearance: none
 
 // ==================== CUSTOM MIXINS ==================== //
-// container
+
 @mixin container
   max-width: 1170px
   margin: 0 auto
-  // padding: 0
 
-// clearfix
 @mixin cf
   &::before
     content: ''

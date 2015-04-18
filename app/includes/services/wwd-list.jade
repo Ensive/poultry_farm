@@ -1,5 +1,5 @@
 .services-wrapper
-  .services
+  .services.container
     section
       h2.services__title.section-title What we do
 
@@ -8,12 +8,13 @@
         .services-item
           article
             .services-item__image
-              .services-item__image-wrapper
-                -var serviceName = service.title.replace(/\s/g, '-').toLowerCase()
-                img(src='images/services/#{ serviceName }.jpg')
+              -var serviceName = service.title.replace(/\s/g, '-').toLowerCase()
+              a.services-item__image-wrapper(href='##{ serviceName }')
+                img(src='images/services/#{ serviceName }.jpg' draggable='false' alt='Image of #{ service.title }')
             .services-item__content
-              h2.services-item__title= service.title
-              h3.services-item__subtitle= service.subtitle
+              header
+                h2.services-item__title= service.title
+                h3.services-item__subtitle= service.subtitle
               p.services-item__text= service.text
-              a.services-item__button(href='##{ serviceName }') More
+              a.services-item__button.more-button(href='##{ serviceName }' role='button') More
 

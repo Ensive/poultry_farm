@@ -1,0 +1,12 @@
+.offers-wrapper
+
+  .offers.container
+    section
+      h2.offers__title.section-title Special offers
+      -var offers = [{title: 'Eteger rutrum', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius micum sociis.'}, {title: 'Eteger rutrum', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius micum sociis.'}, {title: 'Eteger rutrum', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius micum sociis.'}, {title: 'Eteger rutrum', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius micum sociis.'}]
+      each offer, index in offers
+        .offers-item
+          article
+            .offers-item__circle= index + 1 + '.'
+            h2.offers-item__title= offer.title
+            p.offers-item__text= offer.text
