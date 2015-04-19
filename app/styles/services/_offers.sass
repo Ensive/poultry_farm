@@ -19,6 +19,7 @@
     padding: 0 20px
 
     &__circle
+      display: block
       position: relative
       width: 124px
       height: 124px
@@ -28,8 +29,14 @@
       font-size: 6rem
       text-align: center
       text-indent: 10px
+      text-decoration: none
+      color: #fff
       border: 6px solid $pf_yellow
       border-radius: 100%
+      transition: background-color .2s ease, color .2s ease
+      &:hover
+        background-color: $pf_yellow
+        color: $pf_text
 
     &__title
       margin: 0 0 20px 0

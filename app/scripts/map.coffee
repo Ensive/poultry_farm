@@ -2,14 +2,15 @@ PF_Map = (() ->
   'use strict'
 
   # html stuff
-  mapContainer = document.getElementById 'pf-map'
+  mapContainer = document.getElementsByClassName('pf-map')[0]
 
   # info window
   infoBox = document.createElement 'div'
   infoBox.className = 'map-info-box'
   infoBoxText = '<b>Poultry farm</b>'
   infoBoxText += '<br />'
-  infoBoxText += '&ldquo;You\'ll love our chicken&ldquo;'
+  infoBoxText += '8901 Marmora Road,<br />'
+  infoBoxText += 'Glasgow, D04 89GR.'
   infoBox.innerHTML = infoBoxText
 
   # coordinates

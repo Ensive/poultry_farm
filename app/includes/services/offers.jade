@@ -3,11 +3,12 @@
   .offers.container
     section
       h2.offers__title.section-title Special offers
-      -var offers = [{title: 'Eteger rutrum', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius micum sociis.'}, {title: 'Eteger rutrum', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius micum sociis.'}, {title: 'Eteger rutrum', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius micum sociis.'}, {title: 'Eteger rutrum', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius micum sociis.'}]
+      -var offers = [{link: 'offer-link', title: 'Eteger rutrum', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius micum sociis.'}, {link: 'offer-link', title: 'Eteger rutrum', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius micum sociis.'}, {link: 'offer-link', title: 'Eteger rutrum', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius micum sociis.'}, {link: 'offer-link', title: 'Eteger rutrum', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius micum sociis.'}]
       each offer, index in offers
         .offers-item
           article
             header
-              .offers-item__circle= index + 1 + '.'
+              -var link = offer.link + '-' + (index + 1).toString()
+              a.offers-item__circle(href='##{ link }')= index + 1 + '.'
               h2.offers-item__title= offer.title
             p.offers-item__text= offer.text

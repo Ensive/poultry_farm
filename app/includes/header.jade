@@ -2,12 +2,18 @@
 block link
 
 // header
-div.header-wrapper
+.header-wrapper
   header.header.container
     //- @todo: separate titles for each page
     block h1
     h2.header__title
       a.header__title-link(href='/' title='Home') Poultry farm
+
+    // mobile menu button
+    button.mobile-menu-btn
+      span.line(aria-hidden='true')
+
+    // main menu
     nav.header__navigation(role='navigation')
       h2.hidden Main menu
       - var menu = { 'home': '/', 'services': '/services.html', 'blog': '/blog.html', 'contacts': '/contacts.html' }
