@@ -7,6 +7,7 @@
       each offer, index in offers
         .offers-item
           article
-            .offers-item__circle= index + 1 + '.'
-            h2.offers-item__title= offer.title
+            header
+              .offers-item__circle= index + 1 + '.'
+              h2.offers-item__title= offer.title
             p.offers-item__text= offer.text

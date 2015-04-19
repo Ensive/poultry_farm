@@ -1,0 +1,22 @@
+extends layouts/default
+
+block googleMapsApi
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAQjSMVCSomUxbZ4w2X5JNu0dnWoFLTqmA')
+
+block h1
+  h1.hidden Contacts | Poultry farm
+
+block link
+  -var active = 'contacts'
+
+block content
+  include ./includes/header
+  include ./includes/map
+
+  main(role='main')
+    include ./includes/contacts/form
+
+  include ./includes/footer
+
+block mapScript
+  script(src='scripts/map.js')

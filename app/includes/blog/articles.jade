@@ -1,0 +1,39 @@
+.articles-wrapper
+  .articles.container
+    section
+      h2.articles__title.section-title Blog
+      -var articles = [{datetime: '2015-04-08', date: '08 apr.', image: 'blog-1', title: 'Praesent justo dolor, lobortis qui pulvinar ac, lorem.', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna.'}, {datetime: '2015-04-08', date: '08 apr.', image: 'blog-2', title: 'Praesent justo dolor, lobortis quis, lobortis dignissim, pulvinar ac, lorem.', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna.'}, {datetime: '2015-04-08', date: '08 apr.', image: 'blog-3', title: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna.'}]
+      for article in articles
+        // article
+        .articles-item
+          article
+
+            header.articles-item__header
+              //- split the date field
+              -var date = article.date.split(' ');
+              .articles-item__post-date-wrapper
+                time.articles-item__post-date(datetime='#{ article.datetime }')
+                  span.articles-item__post-date__day= date[0]
+                  span.articles-item__post-date__month= date[1]
+
+              //- form a link
+              -var link = article.title.replace(/\s/g, '-').replace(/\,?\.?/g, '').toLowerCase()
+              a.articles-item__image(href='##{ link }')
+                img(src='images/blog/#{ article.image }.jpg' alt='Image - #{ article.image }' title='#{ article.title }')
+              h3.articles-item__title= article.title
+
+            p.articles-item__text= article.text
+            a.articles-item__button.more-button(href='##{ link }' role='button') More
+
+      // pagination
+      //- the second one :)
+      span.cf
+      nav.articles-pagination
+        h4.hidden Page navigation
+        a.articles-pagination__link.articles-pagination__link--prev(href='#prev-page') Prev
+        -var pages = [1, 2, 3]
+        for page in pages
+          a.articles-pagination__link(href='#page-#{ page }')= page
+        a.articles-pagination__link.articles-pagination__link--next(href='#next-page') Next
+
+

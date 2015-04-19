@@ -1,0 +1,98 @@
+.contacts-wrapper
+  position: relative
+  width: 100%
+  height: 877px
+  background: url('../images/black-bg.jpg') 0 0 repeat
+  @include cf
+
+// custom block on the map
+.contacts__info-box
+  position: absolute
+  top: -212px
+  left: 50%
+  width: 330px
+  height: 128px
+  padding: 32px 0 0 45px
+  margin-left: -165px
+  background-color: #303334
+  font-family: Georgia, serif
+  font-size: 26px
+  font-size: 2.6rem
+  color: #FFF
+
+  span
+    display: block
+    letter-spacing: -0.3px
+    &:last-child
+      margin: 10px 0 0 0
+
+.contacts
+  @include cf
+
+  &__title
+    margin: 210px 0 59px
+    color: #fff
+    letter-spacing: -1.4px
+
+  // contact form
+  .cf-wrapper
+    width: 100%
+
+  .cf
+    width: 100%
+
+    &__fieldset
+      width: 48.717948717949%
+      float: left
+      margin: 0 2.564102564103% 0 0
+      &:last-of-type
+        margin: 0
+
+    &__name,
+    &__email,
+    &__tel,
+    &__message
+      display: block
+      width: 100%
+      height: 57px
+      padding: 5px 20px 0
+      margin: 0 0 33px 0
+      // &:focus
+        // background-color: $pf_text
+        // color: #fff
+      &.valid
+        color: #fff
+        background-color: green
+
+      color: #878A8B
+      font-family: $ubuntu-light
+      font-size: 13px
+      font-size: 1.3rem
+      line-height: 56px
+
+      border: 0
+      background-color: #fff
+      border-bottom: 1px solid #B2B3B3
+
+    &__message
+      height: 237px
+      resize: none
+
+    &__submit
+      float: right
+      width: 153px
+      height: 44px
+      margin: 20px 0 0 0
+      font-family: Georgia, serif
+      font-size: 18px
+      font-size: 1.8rem
+      line-height: 42px
+      letter-spacing: 0.4px
+      color: #FEFEFE
+      border: 0
+      cursor: pointer
+      transition: box-shadow .5s linear
+      @include cf
+      &:hover, &:active, &:focus
+        box-shadow: 0 0 2px #fff
+

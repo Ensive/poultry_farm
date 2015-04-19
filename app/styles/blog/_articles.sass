@@ -1,0 +1,108 @@
+.articles-wrapper
+  width: 100%
+  height: 100%
+  background: url('../images/white-bg.jpg') 0 0 repeat
+  @include cf
+
+.articles
+  // pixelf perfect ...
+  margin-bottom: -45px
+
+  &__title
+    margin: 156px 0 105px 0
+    letter-spacing: -3.5px
+
+  &-pagination
+    display: block
+    margin: -17px 0 0 0
+    font-size: 26px
+    font-size: 2.6rem
+    @include cf
+    &__link
+      color: $pf_text
+      text-decoration: none
+      margin: 0 13px 0 0
+      &--next,
+      &--prev
+        margin: 0 25px 0 0
+      &--next
+        margin-left: 10px
+      &:hover
+        text-decoration: underline
+
+  // article item
+  &-item
+    padding: 0 0 0 40px
+    margin: 0 0 102px 0
+    @include cf
+
+    &__header
+      position: relative
+
+    &__post-date-wrapper,
+    &__post-date
+      display: block
+      border-radius: 100%
+
+    &__post-date-wrapper
+      z-index: 1
+      position: absolute
+      top: -40px
+      left: -40px
+      width: 172px
+      height: 172px
+      background: url('../images/white-bg.jpg') 0 0 repeat
+      overflow: hidden
+      border: 10px solid transparent
+      backface-visibility: hidden
+      cursor: default
+
+    &__post-date
+      color: #FFF
+      width: 152px
+      height: 152px
+      padding: 27px 0 0 8px
+      background-color: $pf_yellow
+      text-align: center
+
+      &__day
+        display: block
+        font-size: 72px
+        font-size: 7.2rem
+      &__month
+        display: block
+        margin: -5px 0 0 3px
+        font-size: 30px
+        font-size: 3rem
+
+    &__image
+      display: block
+      overflow: hidden
+      backface-visibility: hidden
+      img
+        transition: transform .3s ease
+      &:hover img
+        transform: scale(1.05)
+
+    &__title
+      color: $pf_text
+      font-size: 26px
+      font-size: 2.6rem
+      margin: 34px 0 16px 0
+      letter-spacing: -0.2px
+
+    &__text
+      color: #565656
+      font-family: $ubuntu-light
+      font-size: 13px
+      font-size: 1.3rem
+      line-height: 26px
+
+    &__button
+      width: 88px
+      height: 44px
+      margin: 21px 0 0 0
+      font-size: 18px
+      font-size: 1.8rem
+      line-height: 44px
+      color: #FEFEFE

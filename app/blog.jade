@@ -1,21 +1,19 @@
-//- services.jade
+//- blog.jade
 extends layouts/default
 
 //- h1 of the current page
 block h1
-  h1.hidden Services | Poultry farm
+  h1.hidden Blog | Poultry farm
 
 //- active link
 block link
-  -var active = 'services'
+  -var active = 'blog'
 
 //- content of the page
 block content
   include ./includes/header
 
   main(role='main')
-    include ./includes/services/wwd-list
-    include ./includes/services/fresh-block
-    include ./includes/services/offers
+    include ./includes/blog/articles
 
   include ./includes/footer
