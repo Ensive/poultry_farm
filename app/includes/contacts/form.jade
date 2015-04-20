@@ -12,15 +12,19 @@
 
       // contact form
       .cf-wrapper
-        form.cf
+        form.cf(action='' method='post' novalidate)
 
           fieldset.cf__fieldset
-            input.cf__name(type='text' placeholder='Name' maxlength='32' required autofocus)
-            input.cf__email(type='email' placeholder='Email' required)
-            input.cf__tel(type='tel' placeholder='Phone')
+            .cf__field
+              input.cf__name(type='text' placeholder='Name' maxlength='32' required autofocus)
+            .cf__field
+              input.cf__email(type='email' placeholder='Email' required)
+            .cf__field
+              input.cf__tel(type='tel' placeholder='Phone')
 
           fieldset.cf__fieldset
-            textarea.cf__message(rows='4' cols='50' placeholder='Message')
+            .cf__field.cf__field--message
+              textarea.cf__message(rows='4' cols='50' placeholder='Message')
 
           button.cf__submit.submit-button(type='submit') Send message
 

@@ -8,7 +8,7 @@ PF_Parallax = ( ( $ ) ->
   fourthNumber = $ '.section-number--wwd'
 
   doTranslate = ( decreaseNumber, vScroll ) ->
-    divider = 5
+    divider = 4
     return 'translate( 0px, -' + ( vScroll - decreaseNumber ) / divider + '% )'
 
   # implement parallax effect

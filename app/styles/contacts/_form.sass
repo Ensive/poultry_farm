@@ -41,12 +41,30 @@
   .cf
     width: 100%
 
+    &__field
+      position: relative
+      height: 57px
+      margin-bottom: 33px
+      @include cf
+      &--message
+        height: 237px
+
     &__fieldset
       width: 48.717948717949%
       float: left
       margin: 0 2.564102564103% 0 0
       &:last-of-type
         margin: 0
+
+    &__error
+      position: absolute
+      bottom: -30px
+      left: 0
+      height: 25px
+      font-family: $ubuntu-light
+      font-size: 15px
+      font-size: 1.5rem
+      color: #fff
 
     &__name,
     &__email,
@@ -57,19 +75,19 @@
       height: 57px
       padding: 5px 20px 0
       margin: 0 0 33px 0
-      &.valid
-        color: #fff
-        background-color: green
-
       color: #878A8B
       font-family: $ubuntu-light
       font-size: 13px
       font-size: 1.3rem
       line-height: 56px
-
       border: 0
       background-color: #fff
       border-bottom: 1px solid #B2B3B3
+      border-radius: 0
+      @include appearance-none
+      &.valid
+        color: #fff
+        background-color: green
 
     &__message
       height: 237px

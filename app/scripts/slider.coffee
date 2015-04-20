@@ -129,4 +129,4 @@ PF_Slider = ( ( $ ) ->
 document.addEventListener 'DOMContentLoaded', ->
 
   # init the slider
-  new PF_Slider '.slider-container', '.slider-item', '.slider__nav', true, 10000, 3000, true
+  new PF_Slider '.slider-container', '.slider-item', '.slider__nav', true, 10000, 1000, true

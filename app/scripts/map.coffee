@@ -1,4 +1,4 @@
-PF_Map = (() ->
+PF_Map = ( ( $ ) ->
   'use strict'
 
   # html stuff
@@ -26,6 +26,11 @@ PF_Map = (() ->
   # map
   map = undefined
 
+  # options
+  isDraggable = ->
+    viewport = $(window).width() + 15
+    return if viewport <= 768 then false else true
+
   # object
   googleMap =
 
@@ -40,6 +45,7 @@ PF_Map = (() ->
         zoom: 10
         disableDefaultUI: true
         scrollwheel: false
+        draggable: isDraggable()
 
       # info window
       infowindow = new google.maps.InfoWindow
@@ -69,7 +75,7 @@ PF_Map = (() ->
   # return map object
   googleMap
 
-)()
+) jQuery
 
 document.addEventListener 'DOMContentLoaded', ->
   PF_Map.init()

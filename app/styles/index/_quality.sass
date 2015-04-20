@@ -1,7 +1,6 @@
 .quality-wrapper
   width: 100%
   min-height: 883px
-  // height: 883px
   background: url('../images/white-bg.jpg') 0 0 repeat
   @include cf
 
@@ -18,10 +17,15 @@
 
     &__circle
       width: 92.991452991453%
-      // height: 272px
+      max-width: 272px
+      height: 272px
       margin: 0 auto
-      // border: 13px solid $pf_yellow
-      // border-radius: 100%
+
+      .progress-meter text
+        color: #303334
+        font-family: $ubuntu-medium
+        font-size: 86px
+        font-weight: 500
 
     &__title
       margin: 57px 0 17px

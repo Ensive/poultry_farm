@@ -9,6 +9,7 @@ PF_Events = ( ( $ ) ->
   toggleMenu = ->
     $this = $ @
     $this.toggleClass('active').siblings('.header__navigation').slideToggle()
+    $('html').toggleClass 'btn-clicked'
 
   # when scrolling
   doStuffOnScroll = ->
