@@ -1,1 +1,4 @@
-PF_Validation
+PF_Validation = ( ( $ ) ->
+  'use strict'
+
+)

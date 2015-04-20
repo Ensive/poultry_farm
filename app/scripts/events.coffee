@@ -11,13 +11,11 @@ PF_Events = ( ( $ ) ->
     $this.toggleClass('active').siblings('.header__navigation').slideToggle()
 
   # when scrolling
-  onScrolling = ->
+  doStuffOnScroll = ->
     $scroll = $(@).scrollTop()
 
-    # if $scroll > 0
-
   # when resizing
-  onResizing = ->
+  doStuffOnResize = ->
     viewport = $(window).width() + 15
 
     # @todo: investigate and refactor
@@ -34,8 +32,8 @@ PF_Events = ( ( $ ) ->
     # init function
     init: ->
       $mobileBtn.on 'click', toggleMenu
-      $(window).on 'scroll', onScrolling
-      $(window).on 'resize', onResizing
+      $(window).on 'scroll', doStuffOnScroll
+      $(window).on 'resize', doStuffOnResize
 
 ) jQuery
 

@@ -85,6 +85,7 @@ PF_Slider = ( ( $ ) ->
       indent = parseInt(_this.container.css('left'), 10) + _this.slideWidth
 
       # slide the item
+      # @todo: refactor
       _this.container.animate
         left: indent
         _this.speed
@@ -107,6 +108,7 @@ PF_Slider = ( ( $ ) ->
 
       # count current indent
       indent = parseInt(_this.container.css('left'), 10) - _this.slideWidth
+      # @todo: refactor
       _this.container.animate
         left: indent
         _this.speed
@@ -127,4 +129,4 @@ PF_Slider = ( ( $ ) ->
 document.addEventListener 'DOMContentLoaded', ->
 
   # init the slider
-  new PF_Slider '.slider-container', '.slider-item', '.slider__nav', true, 5000, 1000, true
+  new PF_Slider '.slider-container', '.slider-item', '.slider__nav', true, 10000, 3000, true
