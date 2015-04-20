@@ -1,1 +1,14 @@
 //- includes/index/quality.jade
+.quality-wrapper
+
+  .quality.container
+    section
+      h2.quality__title.section-title Quality
+
+      -var items = [{title: 'Duisac turpis nteger', text: 'Duisac turpis. Integer rutrum ante eu lacuestilum lio nisl porta vel sceler.'}, {title: 'Eteger rutrum ante', text: 'Duisac turpis. Integer rutrum ante eu lacuestilum lio nisl porta vel sceler.'}, {title: 'Duisac turpiteger', text: 'Duisac turpis. Integer rutrum ante eu lacuestilum lio nisl porta vel sceler.'}, {title: 'Stilum libero nislrt', text: 'Duisac turpis. Integer rutrum ante eu lacuestilum lio nisl porta vel sceler.'}]
+      for item in items
+        .quality-item
+          article
+            .quality-item__circle
+            h3.quality-item__title= item.title
+            p.quality-item__text= item.text
