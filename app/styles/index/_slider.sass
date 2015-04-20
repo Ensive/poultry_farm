@@ -1,20 +1,38 @@
 .slider-wrapper
-  position: relative
-  width: 100%
-  height: 917px
-  overflow: hidden
-  @include cf
+  &,
+  .container
+    position: relative
+    width: 100%
+    height: 917px
+    overflow: hidden
+    @include cf
+
+  .container
+    height: 877px
 
 .slider
-  position: relative
+  z-index: 0
+  position: absolute
+  top: 0
+  left: 0
   width: 100%
-  height: 877px
-  overflow: hidden
+  height: 917px
+
+  &-container
+    position: relative
+    height: 917px
+    zoom: 1
+    @include cf
 
   &__nav
+    z-index: 1
     position: absolute
     top: 240px
-    right: 35.726495726496%
+    right: 0
+    width: 48.717948717949%
+    margin: 0 10px 0 0
+    // right: 35.726495726496%
+    // right: 41.5%
     .slider__arrow
       display: block
       float: left
@@ -24,19 +42,32 @@
       background-size: 71px 71px
       text-decoration: none
       border-radius: 100%
+      transition: transform .3s ease, background-color .3s ease
       &--right
         margin: 0 0 0 9px
         background: url('../images/slider-right-arrow.svg')
+      &:hover
+        background-color: $pf_text
+        transform: scale(1.1)
 
   &-item
+    width: 100%
     height: 917px
+    float: left
+    // @todo: refactor
+    background: url('../images/slider/slider-image-1.jpg') center center no-repeat
+    &.second
+      background: url('../images/slider/slider-image-2.jpg') center center no-repeat
+    &.third
+      background: url('../images/slider/slider-image-3.jpg') center center no-repeat
 
     &__content
       float: right
-      margin: 345px -2px 0 0
+      margin: 345px 10px 0 0
       color: #fff
       width: 48.717948717949%
-      padding: 0 6.581196581197% 0 0
+      // padding: 0 6.581196581197% 0 0
+      padding: 0 18% 0 0
 
     &__title,
     &__text
@@ -54,24 +85,4 @@
       font-size: 26px
       font-size: 2.6rem
       letter-spacing: -0.2px
-
-    /* @todo: remove */
-    &.second,
-    &.third
-      display: none
-
-  &-image
-    z-index: -1
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 917px
-    background: url('../images/slider/slider-image-1.jpg') center center no-repeat
-    background-size: cover
-
-    /* @todo: remove */
-    &.second,
-    &.third
-      display: none
 

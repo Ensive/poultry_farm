@@ -6,6 +6,7 @@
     top: 0
     left: 0
     height: 80px
+    box-shadow: 0 6px 15px -4px rgba(0, 0, 0, 0.3)
 
   .mobile-menu-btn
     display: block
@@ -17,6 +18,7 @@
       margin: 13px 0 0 0
 
     &__navigation
+      display: none
       position: absolute
       top: 80px
       left: 0
@@ -45,8 +47,9 @@
     &__menu-list
       float: none
 
-  .slider-wrapper
-    margin-top: 50px
+  .push-block
+    height: 80px
+    @include cf
 
   .slider-item__title
     font-size: 7px

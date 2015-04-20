@@ -33,7 +33,10 @@ html(lang='en')
     // endbuild
 
     // build:js scripts/main.js
-    script(src='scripts/main.js')
-    //- conditionally include map script
+    script(src='scripts/events.js')
+
+    //- conditionally include scripts
+    block homeScripts
     block mapScript
+    block validation
     // endbuild

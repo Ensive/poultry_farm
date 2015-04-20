@@ -36,6 +36,7 @@ img
 
 // section numbers
 .section-number
+  z-index: 1
   position: absolute
   bottom: -120px
   left: -10px
@@ -70,6 +71,7 @@ img
   background-color: $pf_yellow
   overflow: hidden
   color: #fff
+  backface-visibility: hidden
   &::before
     content: ''
     z-index: -1
@@ -80,7 +82,7 @@ img
     width: inherit
     height: inherit
     background-color: #2A2D2E
-    transform: translateX(-100%)
+    transform: translateX(-101%)
     transition: transform .2s ease-in
   &:hover, &:active, &:focus
     &::before

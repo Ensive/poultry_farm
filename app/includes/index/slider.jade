@@ -1,22 +1,28 @@
 //- includes/index/slider.jade
-// slider
 .slider-wrapper
 
-  -var images = ['first', 'second', 'third']
-  for image in images
-    .slider-image(class='#{ image }')
+  // section number
+  //- .container
+    .section-number 01
 
-  .slider.container
+  // slider
+  .slider
+
     nav.slider__nav(role='navigation')
-      a.slider__arrow.slider__arrow--left(href='#' role='button')
-      a.slider__arrow.slider__arrow--right(href='#' role='button')
-    section
-      h2.hidden Poultry farm - slides
-      .section-number 01
-      -var slides = [{title: 'You\'ll love our chicken', text: 'Vestibulum libero nisl porta vel scele', index: 'first'}, {title: 'Low fat protein rich eggs', text: 'Vestibulum libero nisl porta vel scele', index: 'second'}, {title: 'Fresh from the farm', text: 'Vestibulum libero nisl porta vel scele', index: 'third'}]
-      for slide in slides
-        .slider-item(class='#{ slide.index }')
-          article
-            .slider-item__content
-              h2.slider-item__title= slide.title
-              p.slider-item__text= slide.text
+      //- h3.hidden Poultry farm - slider navigation
+      //- @todo: data-dir in js
+      a.slider__arrow.slider__arrow--left(href='#' role='button' data-dir='prev')
+      a.slider__arrow.slider__arrow--right(href='#' role='button' data-dir='next')
+
+    .slider-container
+      section
+        //- h2.hidden Poultry farm - slides
+        -var slides = [{index: 'first', title: 'You\'ll love our chicken', text: 'Vestibulum libero nisl porta vel scele'}, {index: 'second', title: 'Fresh from the farm', text: 'Vestibulum libero nisl porta vel scele'}, {index: 'third', title: 'Low fat protein rich eggs', text: 'Vestibulum libero nisl porta vel scele'}]
+        for slide in slides
+          .slider-item(class='#{ slide.index }')
+            article
+              .slider-item__content
+                h2.slider-item__title= slide.title
+                p.slider-item__text= slide.text
+                //- @todo: background image in js
+                //- .slider-item__image(role='image')
